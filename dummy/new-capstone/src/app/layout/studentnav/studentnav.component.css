@@ -1,0 +1,58 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3f51b5; /* Blue color like in the screenshot */
+    padding: 15px 30px;
+    height: 150px; /* Matches the screenshot */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Logo */
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #d1d1d1; /* Light hover effect */
+}
+
+/* Authentication Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.auth-buttons button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    margin-right:50px ;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.auth-buttons button:hover {
+    color: #ffcccb;
+}

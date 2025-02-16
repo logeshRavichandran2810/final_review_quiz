@@ -1,0 +1,21 @@
+<!-- <p>admincreatequiz works!</p> -->
+<form (ngSubmit)="createQuiz($event)">
+    <input type="text" placeholder="Quiz Name" [(ngModel)]="quizName" name="quizName">
+  
+    <select [(ngModel)]="quizTiming" name="timing">
+      <option *ngFor="let time of ['15 mins', '30 mins', '45 mins', '1 hour', '1 hour 30 mins']">{{ time }}</option>
+    </select>
+  
+    <div *ngFor="let question of questions; let i = index">
+      <input type="text" placeholder="Enter Question" [(ngModel)]="question.question" name="question{{i}}">
+      <select [(ngModel)]="question.answerType" name="answerType{{i}}">
+        <option value="multichoice">Multiple Choice</option>
+        <option value="fill-in-the-blank">Fill in the Blank</option>
+        <option value="true-false">True/False</option>
+      </select>
+    </div>
+  
+    <button type="button" (click)="addQuestion()">Add Question</button>
+    <button type="submit">Create Quiz</button>
+  </form>
+  

@@ -1,0 +1,66 @@
+<!-- <div class="register-container">
+  <h2>Student Registration</h2>
+  <form (ngSubmit)="register()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="name" name="name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="email" name="email" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="password" name="password" required />
+
+    <button type="submit" class="btn btn-success">Register</button>
+  </form>
+
+  <p>Already have an account? <a routerLink="/login">Login</a></p>
+</div> -->
+
+<!-- <div class="register-container">
+  <h2>Student Registration</h2>
+  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="name" name="name" required #nameRef="ngModel"/>
+    <div *ngIf="nameRef.invalid && nameRef.touched" class="error text-danger">Name is required.</div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="email" name="email" required email #emailRef="ngModel"/>
+    <div *ngIf="emailRef.invalid && emailRef.touched" class="error text-danger">Enter a valid email.</div>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="password" name="password" required minlength="6" #passwordRef="ngModel"/>
+    <div *ngIf="passwordRef.invalid && passwordRef.touched" class="error text-danger">Password must be at least 6 characters.</div>
+
+    <button type="submit" class="btn btn-success" [disabled]="registerForm.invalid">Register</button>
+  </form>
+
+  <p>Already have an account? <a routerLink="/login">Login</a></p>
+</div> -->
+<div class="register-container">
+  <h2>Student Registration</h2>
+  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+    
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="name" name="name" required #nameRef="ngModel"
+           pattern="^(?!.*@).*" />
+    <div *ngIf="nameRef.invalid && nameRef.touched" class="error text-danger">
+      Name is required and should not be an email.
+    </div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="email" name="email" required #emailRef="ngModel"/>
+    <div *ngIf="emailRef.invalid && emailRef.touched" class="error text-danger">
+      Enter a valid email.
+    </div>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="password" name="password" required minlength="6" #passwordRef="ngModel"/>
+    <div *ngIf="passwordRef.invalid && passwordRef.touched" class="error text-danger">
+      Password must be at least 6 characters long.
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="registerForm.invalid">Register</button>
+  </form>
+
+  <p>Already have an account? <a routerLink="/login">Login</a></p>
+</div>

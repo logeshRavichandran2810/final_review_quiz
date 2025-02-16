@@ -1,0 +1,19 @@
+<div class="quiz-container">
+    <h1 class="heading">Upcoming Quizzes</h1>
+    <div class="quiz-list">
+      <div class="quiz-card" *ngFor="let quiz of quizzes">
+        <h2 class="quiz-title">{{ quiz.name }}</h2>
+        <h5>Quiz Duration : {{quiz.complete_time}}</h5>
+        <h5>Posted On : {{ quiz.posted_date | date:'yyyy-MM-dd' }}</h5>
+
+        
+        <!-- Ensure 'Complete By' and 'Posted On' are correctly formatted -->
+        <!-- <p class="quiz-info"><strong>Complete By:</strong> {{ quiz.completeTime }}</p> -->
+        <!-- <p class="quiz-info"><strong>Posted On:</strong> {{ quiz.postedDate | date:'MMM d, y h:mm a' }}</p> -->
+
+        <button type="submit" (click)="onQuiz(quiz.name)">Start quiz</button>
+        
+      </div>
+    </div>
+    <!-- <button type="submit" (click)="onscore()">Student Scores</button> -->
+</div>

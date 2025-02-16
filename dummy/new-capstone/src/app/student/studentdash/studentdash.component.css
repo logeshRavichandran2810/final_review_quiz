@@ -1,0 +1,94 @@
+/* General Container */
+.quiz-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Heading */
+.heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Quiz List */
+.quiz-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Quiz Card */
+.quiz-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Quiz Title */
+.quiz-title {
+    font-size: 22px;
+    color: #34495e;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Quiz Info */
+.quiz-info {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.quiz-info strong {
+    color: #2c3e50;
+}
+
+/* Start Quiz Button */
+.quiz-card button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.quiz-card button:hover {
+    background: #217dbb;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .quiz-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .quiz-card {
+        max-width: 100%;
+    }
+}

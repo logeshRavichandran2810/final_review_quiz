@@ -1,0 +1,86 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "student1",
+      "password": "password123"
+    },
+    {
+      "id": "2",
+      "username": "student2",
+      "password": "pass456"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "7",
+      "name": "math",
+      "questions": [
+        {
+          "question": "mathematics?",
+          "options": [
+            "1 + 1",
+            "1 + 2",
+            "1 + 3",
+            "1 + 4"
+          ],
+          "correctAnswer": "1 + 1",
+          "difficulty": "easy"
+        }
+      ],
+      "completeTime": "15 mins",
+      "postedDate": "2025-02-14T01:13:18.339Z"
+    },
+    {
+      "id": "10",
+      "name": "sql",
+      "questions": [
+        {
+          "question": "mysql",
+          "options": [
+            "d",
+            "dd",
+            "ddd",
+            "dddd"
+          ],
+          "correctAnswer": "d",
+          "difficulty": "easy"
+        },
+        {
+          "question": "sql?",
+          "options": [
+            "language",
+            "tool",
+            "software",
+            "query"
+          ],
+          "correctAnswer": "query",
+          "difficulty": "easy"
+        }
+      ],
+      "completeTime": "15 mins",
+      "postedDate": "2025-02-14T06:42:51.043Z"
+    }
+  ],
+  "results": [
+    {
+      "id": "01af",
+      "quizName": "Math Quiz",
+      "score": 2,
+      "total": 2,
+      "submittedAt": "2025-02-13T11:37:58.734Z"
+    }
+  ],
+  "admins": [
+    {
+      "id": "1",
+      "username": "admin1",
+      "password": "admin123"
+    },
+    {
+      "id": "2",
+      "username": "admin2",
+      "password": "admin456"
+    }
+  ]
+}

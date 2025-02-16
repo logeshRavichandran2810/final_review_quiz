@@ -1,0 +1,58 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #800040; /* Dark Maroon */
+    padding: 18px 40px; /* Increased padding for more height */
+    height: 70px; /* Increased height */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Logo */
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffcccb; /* Light pink hover effect */
+}
+
+/* Authentication Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.auth-buttons button {
+    background-color: white;
+    color: #800040;
+    border: none;
+    padding: 10px 18px; /* Slightly bigger buttons */
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.auth-buttons button:hover {
+    background-color: #ffcccb;
+    color: #800040;
+}

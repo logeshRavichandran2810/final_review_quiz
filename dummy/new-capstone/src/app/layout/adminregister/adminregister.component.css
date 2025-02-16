@@ -1,0 +1,84 @@
+/* Full-page background */
+body {
+    background: url('https://source.unsplash.com/1600x900/?snow,mountains') no-repeat center center/cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Centered Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 480px;
+    backdrop-filter: blur(15px);
+    margin: auto;
+    margin-top: 150px;
+    height: 400px;
+}
+
+/* Heading */
+h2 {
+    color: #050505;
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    outline: none;
+    font-size: 20px;
+    border: 1px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+/* Login Button */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #16d3f2;
+    border: none;
+    border-radius: 8px;
+    color: rgb(4, 1, 1);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #14b8d4;
+}
+
+/* Register Links */
+p {
+    margin-top: 20px;
+    color: #222;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+a {
+    color: #16d3f2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,62 @@
+<div class="admin-dashboard">
+  <h2>Admin Dashboard</h2>
+  <button type="submit" (click)="onscore()">View Student Scores</button><hr>
+
+  <!-- Add New Quiz -->
+  <h3>Add New Quiz</h3>
+  <input type="text" placeholder="Quiz Name" [(ngModel)]="newQuiz.name" />
+
+  <label>Select Completion Deadline:</label>
+  <select [(ngModel)]="newQuiz.completeTime">
+      <option value="" disabled selected>Select Time</option>
+      <option *ngFor="let time of ['15 mins', '30 mins', '45 mins', '1 hour', '1 hour 30 mins', '1 hour 45 mins', '2 hours']" [value]="time">
+          {{ time }}
+      </option>
+  </select>
+
+  <button (click)="addQuiz()">Add Quiz</button>
+
+  <hr />
+
+  <!-- Display Quizzes -->
+  <h3>Manage Quizzes</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Quiz Name</th>
+        <th>Completion Time</th>
+        <th>Posted Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let quiz of quizzes">
+        <td>{{ quiz.id }}</td>
+        <td>{{ quiz.name }}</td>
+        <td>{{ quiz.complete_time }}</td>  <!-- Ensure correct binding -->
+        <td>{{ quiz.posted_date | date:'medium' }}</td> 
+        <td>
+          <button (click)="selectQuiz(quiz)">Add</button>&nbsp;
+          <button (click)="editQuiz(quiz)">Edit</button>&nbsp;
+          <button (click)="deleteQuiz(quiz.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Add Question to Selected Quiz -->
+  <div *ngIf="selectedQuiz">
+      <h3>Add Question to {{ selectedQuiz.name }}</h3>
+      <input type="text" placeholder="Question" [(ngModel)]="newQuestion.question" />
+      <div *ngFor="let option of newQuestion.options; let i = index">
+        <input type="text"
+          [(ngModel)]="newQuestion.options[i]"
+          (ngModelChange)="limitLength($event, i)"
+          placeholder="Option {{ i + 1 }}" />
+      </div>
+      
+      <input type="text" placeholder="Correct Answer" [(ngModel)]="newQuestion.correctAnswer" />
+      <button (click)="addQuestionToQuiz()">Add Question</button>
+  </div>
+</div>

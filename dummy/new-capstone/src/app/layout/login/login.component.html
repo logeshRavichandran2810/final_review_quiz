@@ -1,0 +1,41 @@
+<!-- <div class="login-container">
+    <h1>Login</h1>
+    <form (ngSubmit)="login()">
+      <label>Email:</label>
+      <input type="email" [(ngModel)]="email" required />
+  
+      <label>Password:</label>
+      <input type="password" [(ngModel)]="password" required />
+  
+      <div class="user-type">
+        <label>
+          <input type="radio" name="userType" [(ngModel)]="userType" value="student" required>
+          Student
+        </label>
+        <label>
+          <input type="radio" name="userType" [(ngModel)]="userType" value="admin" required>
+          Admin
+        </label>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  
+    <p>Don't have an account?  
+      <a routerLink="/studentregister">Register as Student</a> |  
+      <a routerLink="/adminregister">Register as Admin</a>
+    </p>
+  </div>
+   -->
+   <div class="login-container">
+    <h2>Student Login</h2>
+    <!-- <label for="">username</label> -->
+    <input type="text" [(ngModel)]="email" placeholder="email" class="form-control" required >
+    <!-- <label for="">Password</label> -->
+    <input type="password" [(ngModel)]="password" class="form-module" class="form-control" placeholder="Password" required>
+    <button (click)="login()">Login</button>
+     <p>Don't have an account?  
+      <a routerLink="/studentregister">Register as Student</a>  
+      <!-- <a routerLink="/adminregister">Register as Admin</a> -->
+    </p>
+  </div>

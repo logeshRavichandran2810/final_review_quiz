@@ -1,0 +1,10 @@
+<nav class="navbar">
+  <div class="logo">Quiz Application</div>
+
+  <div class="auth-buttons">
+      <button *ngIf="!isLoggedIn" routerLink="/login">Login</button>
+      <button *ngIf="!isLoggedIn" routerLink="/studentregister">Register</button>
+      <button *ngIf="!isLoggedIn" routerLink="/adminregister">Admin</button>
+      <button *ngIf="isLoggedIn" (click)="logout()" >Logout</button>
+  </div>
+</nav>
