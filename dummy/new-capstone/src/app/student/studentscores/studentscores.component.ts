@@ -36,6 +36,7 @@ export class StudentscoresComponent implements OnInit {
             (b.submittedAt ? b.submittedAt.getTime() : 0) -
             (a.submittedAt ? a.submittedAt.getTime() : 0)
           );
+         
       }, error => console.error('Error fetching quizzes:', error));
     }, error => console.error('Error fetching results:', error));
   }
